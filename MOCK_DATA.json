@@ -1,0 +1,248 @@
+[
+  {
+    "name": "strawberry",
+    "description": "Strawberries are juicy, red, heart-shaped berries with a sweet and slightly tart taste.",
+    "image": "\thttps://static.libertyprim.com/files/familles/fraise-large.jpg?1569271765",
+    "tags": "fruit",
+    "price": 214
+  },
+  {
+    "name": "orange",
+    "description": " citrus fruits with a bright orange color, a sweet and tangy flavor, and a juicy, pulpy interior.",
+    "image": "https://cdn.getir.com/product/5e1c2c347a39c0758a3a758a_en_1622449633965.jpeg",
+    "tags": "fruit",
+    "price": 191
+  },
+  {
+    "name": "Kiwi",
+    "description": "small oval-shaped fruit with brown fuzzy skin, green or yellow flesh, and small black seeds, known for its tangy and sweet flavor.",
+    "image": "\thttps://cdn.getir.com/product/5da1b5d8c1e2e52c436a6cc7_tr_1605182386816.jpeg",
+    "tags": "fruit",
+    "price": 57
+  },
+  {
+    "name": "Avocado 3 ct",
+    "description": " a large central seed, and a creamy, buttery flesh that has a nutty and slightly sweet flavor.",
+    "image": "\thttps://cdn.getir.com/product/6050c7a16e5017d2cdb1c214_tr_1616134921226.jpeg",
+    "tags": "fruit",
+    "price": 187
+  },
+  {
+    "name": "Pineapple",
+    "description": "Pineapple is a sweet and tangy tropical fruit with a rough exterior.",
+    "image": "\thttps://cdn.getir.com/product/5ceae0399d3ea8000196e14a_tr_1623564030417.jpeg",
+    "tags": "fruit",
+    "price": 171
+  },
+  {
+    "name": "Lay's Yogurt & Greens\n",
+    "description": "Lemons are citrus fruits with a bright yellow, acidic pulp, and a sour, tangy flavor often used in cooking and beverages.",
+    "image": "https://cdn.getir.com/product/5bc97aabb137fb001d751ac7_tr_1609123518121.jpeg",
+    "tags": "snacks",
+    "price": 228
+  },
+  {
+    "name": "Doritos Nacho Cheesy\n",
+    "description": "Tea - Grapefruit Green Tea",
+    "image": "https://market-product-images-cdn.getirapi.com/product/7e8a9f86-ed59-416c-8d3f-1b17b9bdf15c.jpg",
+    "tags": "snacks",
+    "price": 108
+  },
+  {
+    "name": "Natural Raw Mixed\n",
+    "description": "Pepper - Paprika, Spanish",
+    "image": "https://market-product-images-cdn.getirapi.com/product/5c9c1cd5-d90b-4d2a-82c2-f734641afe8c.jpg",
+    "tags": "snacks",
+    "price": 191
+  },
+  {
+    "name": "Ülker Mini Wafer\n",
+    "description": "Soup - Campbells, Beef Barley",
+    "image": "https://cdn.getir.com/product/61a5e1270ed403e4b714a35a_tr_1638369309743.jpeg",
+    "tags": "snacks",
+    "price": 203
+  },
+  {
+    "name": "Fiorella Hazelnut\n",
+    "description": "Quail - Jumbo",
+    "image": "https://cdn.getir.com/product/5a6ef37af5cc590004ec9101.jpeg?v=1517483436087",
+    "tags": "snacks",
+    "price": 148
+  },
+  {
+    "name": "Kuzeyden",
+    "description": "Bouillion - Fish",
+    "image": "https://market-product-images-cdn.getirapi.com/product/ed6e9d66-cfdc-41ca-b8b5-4edbea360e99.jpg",
+    "tags": "dairy",
+    "price": 72
+  },
+  {
+    "name": "İçim 3% Milk\n",
+    "description": "Lobster - Cooked",
+    "image": "https://market-product-images-cdn.getirapi.com/product/525f4037-787d-4ab8-8535-f3f28bd39a40.jpg",
+    "tags": "dairy",
+    "price": 74
+  },
+  {
+    "name": "Nesquik Banana Milk\n",
+    "description": "Cookies Almond Hazelnut",
+    "image": "https://cdn.getir.com/product/5ceae03c9d3ea8000196e197_tr_1645532335221.jpeg",
+    "tags": "dairy",
+    "price": 53
+  },
+  {
+    "name": "Kiri Cream Cheese Spread\n",
+    "description": "Lettuce - Green Leaf",
+    "image": "https://market-product-images-cdn.getirapi.com/product/022dc024-ba3b-4cb3-ad93-e2572dae2f87.jpg",
+    "tags": "dairy",
+    "price": 169
+  },
+  {
+    "name": "La Vache Qui Rit Triangle\n",
+    "description": "Scrubbie - Scotchbrite Hand Pad",
+    "image": "https://market-product-images-cdn.getirapi.com/product/b5259682-96ff-49f9-9b98-b3d75079d270.png",
+    "tags": "dairy",
+    "price": 20
+  },
+  {
+    "name": "Heinz Ketchup\n",
+    "description": "Apple - Granny Smith",
+    "image": "https://cdn.getir.com/product/5c8786c4fad88f0001da07f4_tr_1604782016157.jpeg",
+    "tags": "food",
+    "price": 20
+  },
+  {
+    "name": "HP Classic BBQ\n",
+    "description": "Sauce - Marinara",
+    "image": "https://cdn.getir.com/product/5ce6580ea72a950001cc8732_tr_1609410733687.png",
+    "tags": "food",
+    "price": 71
+  },
+  {
+    "name": "Tat Mushrooms\n",
+    "description": "Basil - Fresh",
+    "image": "\thttps://cdn.getir.com/product/606aacbef28c317b09d7784a_tr_1654587824983.jpeg",
+    "tags": "food",
+    "price": 268
+  },
+  {
+    "name": "Sinangil Flour\n",
+    "description": "Sauce - Bernaise, Mix",
+    "image": "https://market-product-images-cdn.getirapi.com/product/05eb2069-a5a9-4e9d-8c7b-3f4f22c7c9ec.jpg",
+    "tags": "food",
+    "price": 136
+  },
+  {
+    "name": "Komili Sunflower Oil\n",
+    "description": "Garlic",
+    "image": "https://market-product-images-cdn.getirapi.com/product/352d5287-b150-4946-9c57-d7a997096176.jpg",
+    "tags": "food",
+    "price": 37
+  },
+  {
+    "name": "İçim Butter\n",
+    "description": "Glove - Cutting",
+    "image": "\thttps://market-product-images-cdn.getirapi.com/product/a0983334-2757-481e-955e-8a9b0dc916c7.jpg",
+    "tags": "food",
+    "price": 209
+  },
+  {
+    "name": "Sütaş Yogurt Butter\n",
+    "description": "Lamb Tenderloin Nz Fr",
+    "image": "https://cdn.getir.com/product/58233dbfd9a3db0004e65a9b_tr_1611238383869.jpeg",
+    "tags": "food",
+    "price": 190
+  },
+  {
+    "name": "Billur Salt with Shaker\n",
+    "description": "Beans - Butter Lrg Lima",
+    "image": "\thttps://market-product-images-cdn.getirapi.com/product/537cbda1-b140-47fe-b2e5-1f73dd055223.jpg",
+    "tags": "food",
+    "price": 180
+  },
+  {
+    "name": "Zel Collagen Bone Broth\n",
+    "description": "Bread - Onion Focaccia",
+    "image": "\thttps://cdn.getir.com/product/61927c766e1bf00bff210228_tr_1647614465040.jpeg",
+    "tags": "food",
+    "price": 145
+  },
+  {
+    "name": "Dr. Oetker Vanilla Pudding\n",
+    "description": "Soup - Base Broth Chix",
+    "image": "https://market-product-images-cdn.getirapi.com/product/590e0e66-2096-4b59-937e-d2cee3c23b12.jpg",
+    "tags": "food",
+    "price": 45
+  },
+  {
+    "name": "Tikveşli Cream 32% Fat\n",
+    "description": "Cake - Bande Of Fruit",
+    "image": "https://cdn.getir.com/product/5cae01d93150750001edd9fb_tr_1652707739447.jpeg",
+    "tags": "food",
+    "price": 191
+  },
+  {
+    "name": "Uno Pastaban Cocoa\n",
+    "description": "Icecream - Dibs",
+    "image": "https://cdn.getir.com/product/633b27a7baee8419dcd5e02c_tr_1664868886433.jpeg",
+    "tags": "food",
+    "price": 107
+  },
+  {
+    "name": "Mutlu Semolina\n",
+    "description": "Wine - Red, Pinot Noir, Chateau",
+    "image": "\thttps://cdn.getir.com/product/6318946ca99e5c84a2a4b824_tr_1662625939550.jpeg",
+    "tags": "food",
+    "price": 139
+  },
+  {
+    "name": "Ceramic Mug - 230ml",
+    "image": "https://media.zid.store/thumbs/998ea011-b8a5-40db-8de0-a242ffc8692a/fdecd0df-5ea9-459c-9ee5-3a305d190051-thumbnail-370x370-70.jpg",
+    "tags": "cup",
+    "price": 150
+  },
+  {
+    "name": "Ceramic Mug - 230ml",
+    "image": "https://media.zid.store/thumbs/998ea011-b8a5-40db-8de0-a242ffc8692a/a3ee117d-5b90-412c-8266-d06f928f5547-thumbnail-370x370-70.jpg",
+    "tags": "cup",
+    "price": 250
+  },
+  {
+    "name": "Ceramic Mug With Saucer - 250ml",
+    "image": "https://media.zid.store/thumbs/998ea011-b8a5-40db-8de0-a242ffc8692a/777787a2-1d8e-42af-aeac-38376585b14a-thumbnail-370x370-70.jpg",
+    "tags": "cup",
+    "price": 50
+  },
+  {
+    "name": " Insulated Glasses Espresso Mugs",
+    "description": "JoyJolt Savor Double Wall Insulated Glasses Espresso Mugs",
+    "image": "https://m.media-amazon.com/images/I/71ZZ0EqfzrL._AC_SL1500_.jpg",
+    "tags": "cup",
+    "price": 258
+  },
+  {
+    "name": "BCnmviku Espresso Shot Glass",
+    "description": "glass Triple Pitcher Barista Single Spouts With Wood Handle",
+    "image": "https://m.media-amazon.com/images/I/61Wo1wNVvnL._AC_SL1500_.jpg",
+    "tags": "cup",
+    "price": 68
+  },
+  {
+    "name": "Ceramic Mug -150ml",
+    "image": "https://media.zid.store/thumbs/998ea011-b8a5-40db-8de0-a242ffc8692a/b34035c5-5bff-4a16-9f43-f29f32a5e485-thumbnail-370x370-70.jpeg",
+    "tags": "cup",
+    "price": 400
+  },
+  {
+    "name": "Ceramic Mug - 190ml",
+    "image": "https://media.zid.store/thumbs/998ea011-b8a5-40db-8de0-a242ffc8692a/0ad36321-733b-4153-9b2e-b25568a791b1-thumbnail-370x370-70.jpeg",
+    "tags": "cup",
+    "price": 15
+  },
+  {
+    "name": "Ceramic mug 190 ml",
+    "image": "https://media.zid.store/thumbs/998ea011-b8a5-40db-8de0-a242ffc8692a/bdd027c4-b04d-4a38-a41c-8ffb88fc5b9a-thumbnail-370x370-70.jpg",
+    "tags": "cup",
+    "price": 10
+  }
+]
