@@ -1,13 +1,22 @@
 import React from "react";
 import { BsCodeSlash } from "react-icons/bs";
 
-const Card = ({ icon, logo, productTitle, description }) => {
+const Card = ({ icon, logo, productTitle, description, price }) => {
   console.log(productTitle);
   return (
     <div class="card">
       <h4 className="cardTitle">{productTitle}</h4>
       <h4 className="cardParagraph">:وصف الخدمة</h4>
       <h4 className="cardParagraph1">{description}</h4>
+      <div className="">
+        <p className="cardPrice">{price + "$"}</p>
+      </div>
+      {/* <section> */}
+      {/* <div class="content">
+          <h2>Kemi</h2>
+          <h2>Kemi</h2>
+        </div> */}
+      {/* </section> */}
       <div className="cardButtom">
         {logo === "instagram" ? (
           <img

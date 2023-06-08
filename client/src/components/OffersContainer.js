@@ -11,6 +11,7 @@ const OffersContainer = () => {
           logo={offer.tags}
           productTitle={offer.productTitle}
           description={offer.description}
+          price={offer.price}
         />
       ))}
     </div>
