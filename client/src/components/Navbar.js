@@ -98,13 +98,13 @@ const Navbar = () => {
           <form class="d-flex" role="search">
             {/* <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> */}
             <div className="logo">
-              //{" "}
+              {/* //{" "} */}
               <img
-                src={require("../assets/logo.jpeg")}
+                src={require("../assets/logo.png")}
                 alt="logo"
                 className="logo"
               />
-              //{" "}
+              {/* //{" "} */}
             </div>
           </form>
         </div>

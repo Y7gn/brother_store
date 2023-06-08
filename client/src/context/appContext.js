@@ -5,12 +5,9 @@ import axios from "axios";
 const initialState = {
   userLoading: true,
 
-  products: [],
-  fruit: [],
-  snacks: [],
-  dairy: [],
-  food: [],
-  cup: [],
+  users: [],
+  offers: [],
+
   catgValue: "fruit",
   user: null,
 };
@@ -40,11 +37,12 @@ const AppProvider = ({ children }) => {
     try {
       const { data } = await axios.get("/api/v1/products/");
       //   console.log(data);
-      const { products } = data;
+      const { users, offers } = data;
       dispatch({
         type: "GET_PRODUCTS",
         payload: {
-          products,
+          users,
+          offers,
         },
       });
     } catch (error) {

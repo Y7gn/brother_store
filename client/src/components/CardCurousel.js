@@ -1,6 +1,6 @@
 import React from "react";
 
-const CardCurousel = ({ icon, logo, text, paragraph, user, price }) => {
+const CardCurousel = ({ icon, logo, productTitle, paragraph, user, price }) => {
   return (
     // <div class="cardCurousel">
     //   <h4 className="cardTitle">{text}</h4>
@@ -28,7 +28,7 @@ const CardCurousel = ({ icon, logo, text, paragraph, user, price }) => {
     // </div>
     <div class="container">
       <div class="card_box">
-        <h4 className="cardTitle">{text}</h4>
+        <h4 className="cardTitle">{productTitle}</h4>
         {/* <h4 className="cardParagraph">:وصف الخدمة</h4> */}
         {/* <h4 className="cardParagraph1">{paragraph}</h4> */}
         <div className="cardButtom">

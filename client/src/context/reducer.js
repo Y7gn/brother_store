@@ -4,12 +4,8 @@ const reducer = (state, action) => {
   if (action.type === "GET_PRODUCTS") {
     return {
       ...state,
-      products: action.payload.products,
-      fruit: action.payload.fruit,
-      snacks: action.payload.snacks,
-      dairy: action.payload.dairy,
-      food: action.payload.food,
-      cup: action.payload.cup,
+      offers: action.payload.offers,
+      users: action.payload.users,
     };
   }
   if (action.type === "CATG") {

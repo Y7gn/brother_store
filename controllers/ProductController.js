@@ -4,12 +4,10 @@ import { StatusCodes } from "http-status-codes";
 const getAllProducts = async (req, res) => {
   let products = await Product.find();
 
-  // let fruit = products.filter((product) => product.tags == "fruit");
-  // let snacks = products.filter((product) => product.tags == "snacks");
-  // let dairy = products.filter((product) => product.tags == "dairy");
-  // let food = products.filter((product) => product.tags == "food");
-  // let cup = products.filter((product) => product.tags == "cup");
-  res.status(StatusCodes.OK).json({ products });
+  let users = products.filter((product) => product.productType == "user");
+  let offers = products.filter((product) => product.productType == "offer");
+
+  res.status(StatusCodes.OK).json({ users, offers });
 };
 
 const addProduct = async (req, res) => {

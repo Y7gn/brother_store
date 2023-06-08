@@ -2,6 +2,9 @@ import mongoose from "mongoose";
 
 const ProductSchema = new mongoose.Schema(
   {
+    productTitle: {
+      type: String,
+    },
     user: {
       type: String,
     },
@@ -14,21 +17,10 @@ const ProductSchema = new mongoose.Schema(
     price: {
       type: Number,
     },
-    // name: {
-    //   type: String,
-    // },
-    // description: {
-    //   type: String,
-    // },
-    // image: {
-    //   type: String,
-    // },
-    // tags: {
-    //   type: String,
-    // },
-    // price: {
-    //   type: Number,
-    // },
+    productType: {
+      type: String,
+      enum: ["user", "offer"],
+    },
   },
   { timestamps: true }
 );

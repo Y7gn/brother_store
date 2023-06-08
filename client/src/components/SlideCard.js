@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { useAppContext } from "../context/appContext";
 
 const SlideCard = () => {
-  const { products } = useAppContext();
+  const { users } = useAppContext();
   const settings = {
     dots: true,
     infinite: true,
@@ -18,12 +18,12 @@ const SlideCard = () => {
       return <ul style={{ margin: "0px" }}>{dots}</ul>;
     },
   };
-  console.log(products);
+  // console.log(users);
   return (
     <>
       <Slider {...settings}>
-        {products.map((value, index) => {
-          const { user, description, price, tags } = value;
+        {users.map((value, index) => {
+          const { productTitle, user, description, price, tags } = value;
           console.log(value.user);
           // console.log(index);
           return (
@@ -31,7 +31,7 @@ const SlideCard = () => {
               <div className="curouselContainer" key={index}>
                 <CardCurousel
                   logo={require("../assets/instagram2.png")}
-                  text={"خدمات انستقرام"}
+                  productTitle={productTitle}
                   paragraph={description}
                   user={user}
                   price={price}
