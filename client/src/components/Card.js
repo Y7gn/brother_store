@@ -8,9 +8,9 @@ const Card = ({ icon, logo, productTitle, description, price }) => {
       <h4 className="cardTitle">{productTitle}</h4>
       <h4 className="cardParagraph">:وصف الخدمة</h4>
       <h4 className="cardParagraph1">{description}</h4>
-      <div className="">
+      {/* <div className="">
         <p className="cardPrice">{price + "$"}</p>
-      </div>
+      </div> */}
       {/* <section> */}
       {/* <div class="content">
           <h2>Kemi</h2>
@@ -21,7 +21,7 @@ const Card = ({ icon, logo, productTitle, description, price }) => {
         {logo === "instagram" ? (
           <img
             src={require("../assets/instagram.png")}
-            width="100px"
+            width="80px"
             alt="my"
             style={{ "border-radius": "50px" }}
             className="logoCard"
@@ -49,10 +49,14 @@ const Card = ({ icon, logo, productTitle, description, price }) => {
         )}
 
         {/* <button className="cardButton">اضافة</button> */}
-        <div className="buttonWrapper">
-          <button class="button-34" role="button">
-            اضافة
-          </button>
+        <div className="buttomRight">
+          <p className="cardPrice">{price + "$"}</p>
+
+          <div className="buttonWrapper">
+            <button class="button-34" role="button">
+              اضافة
+            </button>
+          </div>
         </div>
       </div>
     </div>
