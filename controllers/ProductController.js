@@ -11,8 +11,16 @@ const getAllProducts = async (req, res) => {
 };
 
 const addProduct = async (req, res) => {
-  const { user, description, tags, price } = req.body;
-  let product = await Product.create({ user, description, tags, price });
+  const { user, description, tags, price, productType, productTitle } =
+    req.body;
+  let product = await Product.create({
+    user,
+    description,
+    tags,
+    price,
+    productType,
+    productTitle,
+  });
 
   // let fruit = products.filter((product) => product.tags == "fruit");
   // let snacks = products.filter((product) => product.tags == "snacks");

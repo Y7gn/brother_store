@@ -539,3 +539,60 @@ a {
   display: flex;
   flex-direction: column;
 }
+
+/* ################################# #################################about me page  ###################################################################################################*/
+/* ################################# #################################about me page  ###################################################################################################*/
+/* ################################# #################################about me page  ###################################################################################################*/
+/* ################################# #################################about me page  ###################################################################################################*/
+/* ################################# #################################about me page  ###################################################################################################*/
+.aboutParagraph {
+  font-size: 2rem;
+  color: white;
+  margin-top: 5rem;
+  font-weight: 400;
+  line-height: 4rem;
+}
+.aboutHeader {
+  font-weight: 500;
+  font-size: 5rem;
+  text-align: center;
+  color: white;
+}
+.aboutSubHeader {
+  font-weight: 300;
+  font-size: 4rem;
+  text-align: center;
+  color: white;
+  margin-top: 2rem;
+}
+.AboutPage {
+  padding: 4rem 20rem;
+  text-align: center;
+}
+.AboutMainPage {
+  background-color: black;
+  /* height: 100vh; */
+}
+
+/* http: ; //localhost:3000/ */
+.AboutDiv {
+  padding: 2rem;
+  z-index: -99;
+  /* height: 150vh; */
+  padding: 5rem;
+  background-color: black;
+  /* margin-top: 10rem; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-image: url(assets/images/3.png); */
+  /* background-image: url(assets/back.j); */
+  background-image: url(data:image/png;base64,UklGRooCAABXRUJQVlA4WAoAAAAQAAAAIgAAIgAAQUxQSBMAAAABB1CZiP4HgITwf7wc0f+0BQAAAFZQOCBQAgAAEA0AnQEqIwAjAD5RIIxEJKKhlxQASAUEtIAJyr4K9/vwz7W6AH0aw7wwTfnzA+of+W6L/8V4Xkfnou6LFQkWV6xZVaHt5cn3qcrBhikM6szjnFkY9kjrVlaqTnIRM6LhYA0iBEgIOwJHmL4Zm54EPAAA/voMZb8CnMPX6fV9PzR7KxL3IKZ3ZVP4ZXnGPDYAL50LEKkC3QguL5HeGhDpGVziYDF1rDoOaR0u1T0HlwZ0/tExpEYY+cKNcDv8ebYEzabu8Fr9LvADyLImd3xsjc68sL5MRzZVRBMNGt3lr46d5GArV8O1UocOiqTE4my7nlY5Lo8Q8ILt7RAeFJABMwNOMBqsM5peliAIkifbEfG7n6cbleBQB0dkNwF+/5z7tVNmzB96cL+/pkinN2PVmNwBWNzF/2z/uuinrk4C8jrxc188XBf1uGD03lS4x07Iiobv/x+Uy977/OIuAV9GHU88sD2brnIbX4ocAaN8Ir+Jpreo3FSfe453srVYUrwBK576NEjpEjzmmHSPxEtEWvsOipsRShjx0AmB7BLjGXuvr92Rrcq02FdUybbOFcNA7KnCd5p12fj4odfPBINyU3UON7FiL2JHkMPsYDfZKyD2kpevZXtM2Expnf+CDs/4i287Pbev++kcoJxaXvj9w0jYB/GfgMkm6oHDAoC+vfawv+/JY94bO3zsO9+vX3RXayvX5AIXl0+ydXIx/1dQn3wVykb5h7CiZn69aZ8h/BSUuV7/8kqoywDyZ8oGuB8/UagYCdJS2lzKt5O384AAAA==);
+  /* background-size: cover; */
+  /* background-position: center; */
+  /* margin-bottom: 6rem; */
+  /* padding: 0rem 20rem; */
+  /* padding-bottom: 12rem; */
+  border-radius: 20px;
+}

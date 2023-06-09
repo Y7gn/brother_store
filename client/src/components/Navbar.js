@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <nav class="navbar navbar-expand-lg bg-black py-4 px-5 ">
       <div class="container-fluid">
-        <a class="navbar-brand text-white" href="#">
+        <a class="navbar-brand text-white" href="">
           <div className="social">
             <a
               href="https://www.instagram.com/michnnd.old/"
@@ -52,13 +52,13 @@ const Navbar = () => {
               <a
                 class="nav-link active text-white fs-3 me-3"
                 aria-current="page"
-                href="#"
+                href="/"
               >
                 الرئيسية
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white fs-3 me-3" href="#">
+              <a class="nav-link text-white fs-3 me-3" href="/about">
                 نبذة عنا
               </a>
             </li>
