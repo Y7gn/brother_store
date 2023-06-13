@@ -8,12 +8,13 @@ import { useAppContext } from "../context/appContext";
 
 const SlideCard = () => {
   const { users } = useAppContext();
+
   const settings = {
     dots: true,
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
-    autoplay: true,
+    // autoplay: true,
     appendDots: (dots) => {
       return <ul style={{ margin: "0px" }}>{dots}</ul>;
     },
@@ -23,8 +24,8 @@ const SlideCard = () => {
     <>
       <Slider {...settings}>
         {users.map((value, index) => {
-          const { productTitle, user, description, price, tags } = value;
-          console.log(value.user);
+          const { _id, productTitle, user, description, price, tags } = value;
+          // console.log(value.user);
           // console.log(index);
           return (
             <>
@@ -35,6 +36,7 @@ const SlideCard = () => {
                   paragraph={description}
                   user={user}
                   price={price}
+                  _id={_id}
                 />
               </div>
             </>

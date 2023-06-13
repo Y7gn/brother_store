@@ -14,6 +14,27 @@ const reducer = (state, action) => {
       catgValue: action.payload.catgValue,
     };
   }
+  if (action.type === "HANDLE_CLICK") {
+    const { _id, price, name } = action.payload;
+    console.log(_id);
+    const isIdInCart = state.cart.hasOwnProperty(_id);
+    let updatedCart;
+    if (isIdInCart) {
+      updatedCart = { ...state.cart };
+      state.totalPrice -= price;
+      delete updatedCart[_id];
+    } else {
+      updatedCart = {
+        ...state.cart,
+        [_id]: { _id, name, price, status: true },
+      };
+    }
+    return {
+      ...state,
+      cart: updatedCart,
+      totalPrice: state.totalPrice + price,
+    };
+  }
   if (action.type === "CLEAR_ALERT") {
     return {
       ...state,

@@ -27,6 +27,9 @@
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^7.1.0",
     "morgan": "^1.10.0",
+    "query-string": "^8.1.0",
+    "react-router-dom": "^6.12.1",
+    "react-router-query-string": "^0.1.1",
     "validator": "^13.9.0"
   },
   "devDependencies": {

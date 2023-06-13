@@ -6,14 +6,18 @@ const OffersContainer = () => {
   console.log(offers);
   return (
     <div className="CardsContainer">
-      {offers.map((offer) => (
-        <Card
-          logo={offer.tags}
-          productTitle={offer.productTitle}
-          description={offer.description}
-          price={offer.price}
-        />
-      ))}
+      {offers.map((offer) => {
+        const { tags, productTitle, description, price, _id } = offer;
+        return (
+          <Card
+            logo={tags}
+            productTitle={productTitle}
+            description={description}
+            price={price}
+            _id={_id}
+          />
+        );
+      })}
     </div>
   );
 };

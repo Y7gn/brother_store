@@ -1,6 +1,5 @@
 import React from "react";
-import Navbar from "../components/Navbar.js";
-import Card from "../components/Card.js";
+import { CartSection, Navbar } from "../components";
 import Slider from "../components/Slider.js";
 import MyFooter from "../components/MyFooter.js";
 import OffersContainer from "../components/OffersContainer.js";
@@ -26,6 +25,7 @@ const HomePage = () => {
       </section>
       <Slider />
       <OffersContainer />
+      <CartSection />
 
       <MyFooter />
     </div>

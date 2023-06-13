@@ -7,9 +7,10 @@ const initialState = {
 
   users: [],
   offers: [],
-
+  totalPrice: 0,
   catgValue: "fruit",
-  user: null,
+  // user: null,
+  cart: {},
 };
 
 const AppContext = React.createContext();
@@ -119,6 +120,9 @@ const AppProvider = ({ children }) => {
   //       logoutUser();
   //     }
   //   };
+  const handleClick = ({ _id, name, price }) => {
+    dispatch({ type: "HANDLE_CLICK", payload: { _id, name, price } });
+  };
   useEffect(() => {
     getProducts();
   }, []);
@@ -131,6 +135,7 @@ const AppProvider = ({ children }) => {
       value={{
         ...state,
         getProducts,
+        handleClick,
         // handleChangeCatg,
         // registerUser,
         // loginUser,
