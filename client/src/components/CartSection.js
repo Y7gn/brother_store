@@ -1,8 +1,6 @@
 import React from "react";
 import { useAppContext } from "../context/appContext";
-import { stringify } from "query-string";
 import { useLocation } from "react-router-dom";
-import queryString from "query-string";
 
 const CartSection = () => {
   const { cart } = useAppContext();
@@ -14,22 +12,24 @@ const CartSection = () => {
     const orderDetails = Object.values(cart);
     console.log("orderDetails");
     console.log(orderDetails);
-    const queryParams = {
-      text: `I want to place an order [
-          ${Object.values(cart)
-            .map((element) => {
-              const { name, price } = element;
-              return `***${name}: ${price}$***`;
-            })
-            .join(", ")}
-        ].`,
-    };
-    const queryString1 = queryString.stringify(queryParams);
-    const whatsappUrl = `https://wa.me/+971566551575?${queryString1}`;
+
+    const queryParams = new URLSearchParams();
+    queryParams.set(
+      "text",
+      `I want to place an order [${Object.values(cart)
+        .map((element) => {
+          const { name, price } = element;
+          return `***${name}: ${price}$***`;
+        })
+        .join(", ")}].`
+    );
+
+    const whatsappUrl = `https://wa.me/+971566551575?${queryParams.toString()}`;
 
     // Navigate to the WhatsApp URL
     window.open(whatsappUrl, "_blank");
   };
+
   return (
     <section className="cartContainer">
       <h1 className="cartContainerHeader">Cart Items</h1>
@@ -46,7 +46,7 @@ const CartSection = () => {
                 }}
               >
                 <h1 style={{ color: "white", marginLeft: "2rem" }}>{name} :</h1>
-                <p style={{ color: "white", fontSize: "3rem" }}>{price}</p>
+                <p style={{ color: "white", fontSize: "3rem" }}>{price}$</p>
               </div>
             );
           })}
