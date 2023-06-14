@@ -23,14 +23,20 @@ const CartSection = () => {
     const queryParams = new URLSearchParams();
     queryParams.set(
       "text",
-      `I want to place an order with payment option: ***${paymentType}***\n
-      The order is:
-      [${Object.values(cart)
-        .map((element) => {
-          const { name, price, description } = element;
-          return `***${name}: ${price}$,${description}$***`;
-        })
-        .join(", ")}].`
+      `I want to place an order with payment option: *${paymentType}*\n
+    The order is:
+    ${Object.values(cart)
+      .map((element) => {
+        const { name, price, description, qty } = element;
+
+        return `
+        name:${name}: ${price} ${qty ? "*" + qty : ""} = ${
+          price * (qty ? qty : 1)
+        }$
+        description:${description ? description : ""}
+        \n`;
+      })
+      .join(",")}`
     );
 
     const whatsappUrl = `https://wa.me/+971566551575?${queryParams.toString()}`;
