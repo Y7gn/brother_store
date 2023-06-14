@@ -58,7 +58,9 @@ const CartSection = () => {
                     ? `${price}$`
                     : `${price}x${qty}=${price * qty}$`}
                 </p>
-                <p className="orderDescription">{description}</p>
+                <p className="orderDescription">
+                  {description && `${description}`}
+                </p>
 
                 <h1 className="orderName">:{name}</h1>
               </div>
