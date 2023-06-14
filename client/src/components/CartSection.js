@@ -51,7 +51,7 @@ const CartSection = () => {
 
   return (
     <section className="cartContainer">
-      <h1 className="cartContainerHeader">Cart Items</h1>
+      <h1 className="cartContainerHeader">قائمة طلباتي</h1>
 
       <div className="allcartContainerHeader">
         <div className="rightcartContainerHeader">
@@ -124,7 +124,7 @@ const CartSection = () => {
           </div>
           <h2 className="totalPrice">المجموع: ${totalPrice}</h2>
           <button
-            className="contactBtn"
+            className={`contactBtn ${paymentType === "" && "removeProduct"}`}
             onClick={handleWhatsAppOrder}
             disabled={paymentType === "" ? true : false}
           >

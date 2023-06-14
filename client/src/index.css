@@ -22,6 +22,7 @@ body {
   color: var(--textColor);
   overflow-x: hidden;
 }
+
 .HomePage {
   background: black;
 }
@@ -694,10 +695,10 @@ a {
   color: white;
   margin-left: 2rem;
 }
-.contactBtn:hover {
+/* .contactBtn:hover {
   background: linear-gradient(45deg, rgb(25 53 17), rgb(50 255 100));
   transition: all 0.7s ease-in-out;
-}
+} */
 a {
   text-decoration: none !important;
 }
