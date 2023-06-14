@@ -10,7 +10,6 @@ const CartSection = () => {
 
   const handleTypeSelect = (e) => {
     const name = e.target.name;
-    console.log(name);
     handleChange({ name: "paymentType", value: name });
     setSelectedType(name);
   };
@@ -28,8 +27,8 @@ const CartSection = () => {
       The order is:
       [${Object.values(cart)
         .map((element) => {
-          const { name, price } = element;
-          return `***${name}: ${price}$***`;
+          const { name, price, description } = element;
+          return `***${name}: ${price}$,${description}$***`;
         })
         .join(", ")}].`
     );
@@ -55,7 +54,9 @@ const CartSection = () => {
             return (
               <div key={_id} className="orderInfo">
                 <p className="priceqtytotal">
-                  {price}x{qty}={price * qty}$
+                  {qty === undefined
+                    ? `${price}$`
+                    : `${price}x${qty}=${price * qty}$`}
                 </p>
                 <p className="orderDescription">{description}</p>
 

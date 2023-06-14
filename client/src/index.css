@@ -697,6 +697,9 @@ a {
   background: linear-gradient(45deg, rgb(25 53 17), rgb(50 255 100));
   transition: all 0.7s ease-in-out;
 }
+a {
+  text-decoration: none !important;
+}
 @media (max-width: 767px) {
   .allcartContainerHeader {
     flex-direction: column;
