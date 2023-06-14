@@ -4,7 +4,7 @@ import axios from "axios";
 
 const initialState = {
   userLoading: true,
-
+  paymentType: "",
   users: [],
   offers: [],
   totalPrice: 0,
@@ -123,6 +123,21 @@ const AppProvider = ({ children }) => {
   const handleClick = ({ _id, name, price }) => {
     dispatch({ type: "HANDLE_CLICK", payload: { _id, name, price } });
   };
+  const addProduct = ({ _id, name, price, description }) => {
+    dispatch({
+      type: "ADD_PRODUCT",
+      payload: { _id, name, price, description },
+    });
+  };
+  const removeProduct = ({ _id, name, price, description }) => {
+    dispatch({
+      type: "REMOVE_PRODUCT",
+      payload: { _id, name, price, description },
+    });
+  };
+  const handleChange = ({ name, value }) => {
+    dispatch({ type: "HANDLE_CHANGE", payload: { name, value } });
+  };
   useEffect(() => {
     getProducts();
   }, []);
@@ -136,6 +151,9 @@ const AppProvider = ({ children }) => {
         ...state,
         getProducts,
         handleClick,
+        addProduct,
+        removeProduct,
+        handleChange,
         // handleChangeCatg,
         // registerUser,
         // loginUser,

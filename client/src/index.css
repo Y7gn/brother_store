@@ -260,7 +260,7 @@ a {
   line-height: 24px;
   opacity: 1;
   outline: 0 solid transparent;
-  padding: 2rem 3rem;
+  padding: 1rem 2rem;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
@@ -279,8 +279,8 @@ a {
     /* background-color: red; */
   }
   .logoCard {
-    width: 20px;
-    height: 20px;
+    width: 5rem;
+    height: 5rem;
   }
   .chooseInfoSubParagraph {
     font-size: 2rem;
@@ -430,8 +430,8 @@ a {
 
 .card_box {
   padding: 2.5rem;
-  width: 270px;
-  height: 330px;
+  width: 27rem;
+  height: 33rem;
   border-radius: 20px;
   background: linear-gradient(
     170deg,
@@ -643,4 +643,98 @@ a {
   font-size: 2rem;
   background: linear-gradient(45deg, rgb(135 255 109), rgb(47, 100, 43));
   /* box-shadow: rgb(104 178 105) 0px 10px 20px -10px; */
+}
+.BtnContainer {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.qty {
+  color: white;
+}
+.totalPrice {
+  color: white;
+  font-weight: 500;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.cartPayment {
+  margin-bottom: 4rem;
+}
+.cartPaymentHeader {
+  color: white;
+  font-weight: 300;
+}
+.removeProduct {
+  background: linear-gradient(45deg, #ff6b6b, #ff3838);
+  box-shadow: rgb(194 77 104) 0px 10px 20px -10px;
+}
+.addProduct {
+  background: linear-gradient(45deg, rgb(94, 93, 240), rgb(19, 162, 42));
+  box-shadow: rgb(94, 93, 240) 0px 10px 20px -10px;
+}
+.orderInfo {
+  display: flex;
+  align-items: baseline;
+  justify-content: end;
+}
+.priceqtytotal {
+  color: white;
+  font-size: 3rem;
+  margin-left: 3rem;
+}
+.orderDescription {
+  color: white;
+  font-size: 2rem;
+  font-weight: 100;
+  margin-left: 1rem;
+}
+.orderName {
+  color: white;
+  margin-left: 2rem;
+}
+.contactBtn:hover {
+  background: linear-gradient(45deg, rgb(25 53 17), rgb(50 255 100));
+  transition: all 0.7s ease-in-out;
+}
+@media (max-width: 767px) {
+  .allcartContainerHeader {
+    flex-direction: column;
+    width: 100%;
+  }
+  .leftcartContainerHeader,
+  .rightcartContainerHeader {
+    width: 100%;
+  }
+  .priceqtytotal {
+    font-size: 2rem;
+  }
+  .orderDescription {
+    font-size: 1rem;
+    margin: 0;
+  }
+  .orderName {
+    font-size: 1.4rem;
+    margin: 0;
+  }
+  .orderInfo {
+    justify-content: space-between;
+    margin: 0;
+  }
+  .CardsContainer,
+  .allcartContainerHeader {
+    padding: 3rem;
+  }
+  .card_box {
+    height: fit-content;
+    margin: 0;
+    width: fit-content;
+    margin-bottom: 4rem;
+  }
+  .curouselContainer {
+    gap: 0;
+  }
+  .container {
+    width: 100%;
+  }
 }

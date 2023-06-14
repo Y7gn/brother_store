@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Sdata from "../Data/SData";
 import CardCurousel from "./CardCurousel";
 import Slider from "react-slick";
@@ -8,18 +8,33 @@ import { useAppContext } from "../context/appContext";
 
 const SlideCard = () => {
   const { users } = useAppContext();
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const shouldRenderCarousel = windowWidth > 768; // Adjust the breakpoint as needed
 
   const settings = {
     dots: true,
     infinite: true,
-    slidesToShow: 4,
+
+    slidesToShow: shouldRenderCarousel ? 4 : 2,
     slidesToScroll: 1,
     // autoplay: true,
     appendDots: (dots) => {
       return <ul style={{ margin: "0px" }}>{dots}</ul>;
     },
   };
-  // console.log(users);
+
   return (
     <>
       <Slider {...settings}>
@@ -28,18 +43,16 @@ const SlideCard = () => {
           // console.log(value.user);
           // console.log(index);
           return (
-            <>
-              <div className="curouselContainer" key={index}>
-                <CardCurousel
-                  logo={require("../assets/instagram2.png")}
-                  productTitle={productTitle}
-                  paragraph={description}
-                  user={user}
-                  price={price}
-                  _id={_id}
-                />
-              </div>
-            </>
+            <div className="curouselContainer" key={index}>
+              <CardCurousel
+                logo={require("../assets/instagram2.png")}
+                productTitle={productTitle}
+                paragraph={description}
+                user={user}
+                price={price}
+                _id={_id}
+              />
+            </div>
           );
         })}
       </Slider>

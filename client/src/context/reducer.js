@@ -35,12 +35,74 @@ const reducer = (state, action) => {
       totalPrice: state.totalPrice + price,
     };
   }
+
+  if (action.type === "ADD_PRODUCT") {
+    const { _id, price, name, description } = action.payload;
+    let updatedTotalPrice;
+
+    const isIdInCart = state.cart.hasOwnProperty(_id);
+    let updatedCart;
+
+    if (isIdInCart) {
+      console.log("item is already in the cart");
+      updatedCart = {
+        ...state.cart,
+        [_id]: {
+          ...state.cart[_id],
+          qty: state.cart[_id].qty + 1,
+        },
+      };
+    } else {
+      console.log("item not in cart");
+      updatedCart = {
+        ...state.cart,
+        [_id]: { _id, name, price, status: true, qty: 1, description },
+      };
+    }
+    updatedTotalPrice = state.totalPrice + price;
+
+    return {
+      ...state,
+      cart: updatedCart,
+      totalPrice: updatedTotalPrice,
+    };
+  }
+
+  if (action.type === "REMOVE_PRODUCT") {
+    const { _id, price } = action.payload;
+    const isIdInCart = state.cart && state.cart.hasOwnProperty(_id); // Check if state.cart is defined
+    let updatedCart = { ...state.cart };
+    let updatedTotalPrice = state.totalPrice;
+
+    if (isIdInCart) {
+      if (updatedCart[_id].qty === 1) {
+        // If the quantity becomes zero, remove the product from the cart
+        delete updatedCart[_id];
+      } else {
+        updatedCart[_id].qty -= 1;
+      }
+
+      updatedTotalPrice -= price;
+    }
+
+    return {
+      ...state,
+      cart: updatedCart,
+      totalPrice: updatedTotalPrice,
+    };
+  }
   if (action.type === "CLEAR_ALERT") {
     return {
       ...state,
       showAlert: false,
       alertType: "",
       alertText: "",
+    };
+  }
+  if (action.type === "HANDLE_CHANGE") {
+    return {
+      ...state,
+      [action.payload.name]: action.payload.value,
     };
   }
   if (action.type === "REGISTER_USER_BEGIN") {

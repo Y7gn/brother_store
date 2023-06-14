@@ -3,7 +3,7 @@ import { useAppContext } from "../context/appContext";
 import Card from "./Card";
 const OffersContainer = () => {
   const { offers } = useAppContext();
-  console.log(offers);
+  // console.log(offers);
   return (
     <div className="CardsContainer">
       {offers.map((offer) => {

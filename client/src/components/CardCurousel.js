@@ -13,12 +13,12 @@ const CardCurousel = ({
   const [isInCart, setIsInCart] = useState(false);
   let isItemInCart = false;
   const { handleClick, cart } = useAppContext();
-  console.log(cart);
+  // console.log(cart);
   const handleClickLocal = (e) => {
     console.log(_id);
     console.log(price);
     const cartItems = Object.values(cart);
-    console.log(cartItems);
+    // console.log(cartItems);
     const isItemInCart = cartItems.filter((item) => item._id === _id);
     if (isItemInCart.length === 0) {
       setIsInCart(false);
@@ -30,9 +30,9 @@ const CardCurousel = ({
   };
   useEffect(() => {
     const cartItems = Object.values(cart);
-    console.log(cartItems);
+    // console.log(cartItems);
     const isItemInCart = cartItems.filter((item) => item._id === _id);
-    console.log(isItemInCart.length);
+    // console.log(isItemInCart.length);
     if (isItemInCart.length === 0) {
       setIsInCart(false);
     }

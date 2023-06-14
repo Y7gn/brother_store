@@ -1,22 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import { useAppContext } from "../context/appContext";
 import { useLocation } from "react-router-dom";
 
+import { AiOutlineWhatsApp } from "react-icons/ai";
+
 const CartSection = () => {
-  const { cart } = useAppContext();
-  console.log(cart);
-  console.log("Object.values(cart)");
-  console.log(Object.values(cart));
+  const { cart, totalPrice, handleChange, paymentType } = useAppContext();
+  const [selectedType, setSelectedType] = useState("");
+
+  const handleTypeSelect = (e) => {
+    const name = e.target.name;
+    console.log(name);
+    handleChange({ name: "paymentType", value: name });
+    setSelectedType(name);
+  };
+
   const location = useLocation();
   const handleWhatsAppOrder = () => {
     const orderDetails = Object.values(cart);
-    console.log("orderDetails");
-    console.log(orderDetails);
+    // console.log("orderDetails");
+    // console.log(orderDetails);
 
     const queryParams = new URLSearchParams();
     queryParams.set(
       "text",
-      `I want to place an order [${Object.values(cart)
+      `I want to place an order with payment option: ***${paymentType}***\n
+      The order is:
+      [${Object.values(cart)
         .map((element) => {
           const { name, price } = element;
           return `***${name}: ${price}$***`;
@@ -29,30 +39,94 @@ const CartSection = () => {
     // Navigate to the WhatsApp URL
     window.open(whatsappUrl, "_blank");
   };
+  const imageStyle = {
+    width: "80px",
+    transition: "width 0.3s ease-in-out",
+  };
 
   return (
     <section className="cartContainer">
       <h1 className="cartContainerHeader">Cart Items</h1>
+
       <div className="allcartContainerHeader">
         <div className="rightcartContainerHeader">
           {Object.values(cart).map((element) => {
-            const { _id, name, price } = element;
+            const { _id, name, price, description, qty } = element;
             return (
-              <div
-                key={_id}
-                style={{
-                  display: "flex",
-                  alignItems: "baseline",
-                }}
-              >
-                <h1 style={{ color: "white", marginLeft: "2rem" }}>{name} :</h1>
-                <p style={{ color: "white", fontSize: "3rem" }}>{price}$</p>
+              <div key={_id} className="orderInfo">
+                <p className="priceqtytotal">
+                  {price}x{qty}={price * qty}$
+                </p>
+                <p className="orderDescription">{description}</p>
+
+                <h1 className="orderName">:{name}</h1>
               </div>
             );
           })}
         </div>
         <div className="leftcartContainerHeader">
-          <button className="contactBtn" onClick={handleWhatsAppOrder}>
+          <div className="cartPayment">
+            <h2 className="cartPaymentHeader">
+              وسائل الدفع:
+              <strong> "الزامي" </strong>
+            </h2>
+            <div className="imgPayContainer">
+              <img
+                src={require("../assets/adib.jpg")}
+                alt="social"
+                className="footerPayImg"
+                onClick={(e) => handleTypeSelect(e)}
+                name="اديب"
+                style={selectedType === "اديب" ? imageStyle : undefined}
+              />
+              <img
+                src={require("../assets/bihance.png")}
+                alt="social"
+                className="footerPayImg"
+                name="بايننس"
+                onClick={(e) => handleTypeSelect(e)}
+                style={selectedType === "بايننس" ? imageStyle : undefined}
+              />
+              <img
+                src={require("../assets/coinbase.jpg")}
+                alt="social"
+                className="footerPayImg"
+                name="كوين بيس"
+                onClick={(e) => handleTypeSelect(e)}
+                style={selectedType === "كوين بيس" ? imageStyle : undefined}
+              />
+              <img
+                src={require("../assets/etisalat.jpg")}
+                alt="social"
+                className="footerPayImg"
+                name="اتصالات"
+                onClick={(e) => handleTypeSelect(e)}
+                style={selectedType === "اتصالات" ? imageStyle : undefined}
+              />
+              <img
+                src={require("../assets/duo.jpg")}
+                alt="social"
+                className="footerPayImg"
+                name="دو"
+                onClick={(e) => handleTypeSelect(e)}
+                style={selectedType === "دو" ? imageStyle : undefined}
+              />
+            </div>
+          </div>
+          <h2 className="totalPrice">المجموع: ${totalPrice}</h2>
+          <button
+            className="contactBtn"
+            onClick={handleWhatsAppOrder}
+            disabled={paymentType === "" ? true : false}
+          >
+            <AiOutlineWhatsApp
+              style={{
+                fontSize: "3rem",
+                marginLeft: "1rem",
+                width: "5rem",
+                height: "5rem",
+              }}
+            />{" "}
             Whatsapp
           </button>
         </div>
