@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Sdata from "../Data/SData";
 import CardCurousel from "./CardCurousel";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -20,7 +19,7 @@ const SlideCard = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-
+  console.log(users);
   const shouldRenderCarousel = windowWidth > 768; // Adjust the breakpoint as needed
 
   const settings = {
@@ -29,7 +28,7 @@ const SlideCard = () => {
 
     slidesToShow: shouldRenderCarousel ? 4 : 2,
     slidesToScroll: 1,
-    // autoplay: true,
+    autoplay: true,
     appendDots: (dots) => {
       return <ul style={{ margin: "0px" }}>{dots}</ul>;
     },
@@ -40,8 +39,7 @@ const SlideCard = () => {
       <Slider {...settings}>
         {users.map((value, index) => {
           const { _id, productTitle, user, description, price, tags } = value;
-          // console.log(value.user);
-          // console.log(index);
+
           return (
             <div className="curouselContainer" key={index}>
               <CardCurousel
@@ -51,6 +49,7 @@ const SlideCard = () => {
                 user={user}
                 price={price}
                 _id={_id}
+                tags={tags}
               />
             </div>
           );

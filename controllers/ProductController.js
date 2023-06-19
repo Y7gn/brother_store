@@ -22,12 +22,21 @@ const addProduct = async (req, res) => {
     productTitle,
   });
 
-  // let fruit = products.filter((product) => product.tags == "fruit");
-  // let snacks = products.filter((product) => product.tags == "snacks");
-  // let dairy = products.filter((product) => product.tags == "dairy");
-  // let food = products.filter((product) => product.tags == "food");
-  // let cup = products.filter((product) => product.tags == "cup");
   res.status(StatusCodes.OK).json({ product });
 };
+const updateProduct = async (req, res) => {
+  const { user, description, tags, price, productType, productTitle } =
+    req.body;
+  let updatedProduct = await Product.patch({
+    user,
+    description,
+    tags,
+    price,
+    productType,
+    productTitle,
+  });
 
-export { getAllProducts, addProduct };
+  res.status(StatusCodes.OK).json({ updatedProduct });
+};
+
+export { getAllProducts, addProduct, updateProduct };

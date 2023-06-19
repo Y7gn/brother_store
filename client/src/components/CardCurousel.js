@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { BsCodeSlash } from "react-icons/bs";
 
 import { useAppContext } from "../context/appContext";
 const CardCurousel = ({
@@ -9,6 +10,7 @@ const CardCurousel = ({
   paragraph,
   user,
   price,
+  tags,
 }) => {
   const [isInCart, setIsInCart] = useState(false);
   let isItemInCart = false;
@@ -55,7 +57,7 @@ const CardCurousel = ({
         {/* <h4 className="cardParagraph">:وصف الخدمة</h4> */}
         {/* <h4 className="cardParagraph1">{paragraph}</h4> */}
         <div className="cardButtom">
-          {logo ? (
+          {/* {logo ? (
             <img
               src={logo}
               width="100px"
@@ -65,6 +67,36 @@ const CardCurousel = ({
             />
           ) : (
             icon
+          )} */}
+
+          {tags === "instagram" ? (
+            <img
+              src={require("../assets/instagram.png")}
+              width="100px"
+              alt="my"
+              style={{ borderRadius: "50px" }}
+              className="logoCard"
+            />
+          ) : tags === "tiktok" ? (
+            <img
+              src={require("../assets/tiktok.png")}
+              width="100px"
+              alt="my"
+              style={{ borderRadius: "50px" }}
+              className="logoCard"
+            />
+          ) : tags === "shack" ? (
+            <img
+              src={require("../assets/shakeplus.jpg")}
+              width="100px"
+              alt="my"
+              style={{ borderRadius: "50px" }}
+              className="logoCard"
+            />
+          ) : tags === "develop" ? (
+            <BsCodeSlash size={110} color="#5E5DF0" />
+          ) : (
+            <BsCodeSlash size={110} color="#5E5DF0" />
           )}
           {/* <button className="cardButton">اضافة</button> */}
         </div>
